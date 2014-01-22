@@ -3,6 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# Spree
+gem 'spree', '~> 2.1.3'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-1-stable'
+gem 'spree_wishlist', github: 'spree/spree_wishlist', branch: '2-1-stable'
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-1-stable'
+gem 'spree_store_credits', github: 'spree/spree_store_credits', branch: '2-1-stable'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -31,6 +38,11 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+  gem 'rspec-rails', '>= 2.4'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
