@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: test_spree_store_credit_development
   pool: 5
-  username: test_spree_store_credit
+  username: postgres
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: test_spree_store_credit_test
   pool: 5
-  username: test_spree_store_credit
+  username: postgres
   password:
 
 production:

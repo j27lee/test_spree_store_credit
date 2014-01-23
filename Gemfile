@@ -4,10 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Spree
-gem 'spree', '~> 2.1.3'
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-1-stable'
-gem 'spree_wishlist', github: 'spree/spree_wishlist', branch: '2-1-stable'
-gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-1-stable'
+gem 'spree', '2.1.3'
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-1-stable'
+gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-1-stable'
 gem 'spree_store_credits', github: 'spree/spree_store_credits', branch: '2-1-stable'
 
 # Use postgresql as the database for Active Record
@@ -41,6 +40,11 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.4'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  gem 'database_cleaner'
+  gem 'capybara'
+
 end
 
 
